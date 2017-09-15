@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='json_patch',
@@ -7,14 +7,29 @@ setup(
     version='0.0.0',
     description='An implementation of IETF RFC 6902',
     license='MIT',
-    url='www.github.com/ermel272/<repo>',   # TODO make github repository
+    url='github.com/ermel272/json-patch',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7'
     ],
-    keywords='JSON Patch IETF RFC 6902',
-    install_requires=[]
+    keywords='JSON pointer IETF RFC 6902',
+    install_requires=[
+        # json_pointer TODO: uncomment once json_pointer is published on the PYPI
+    ],
+    extras_require={
+        'dev': [
+            'setuptools==36.2.7',
+            'sphinx==1.6.3'
+        ],
+        'test': [
+            'nose==1.3.7',
+            'coverage==4.4.1',
+            'coveralls==1.2.0'
+        ]
+    },
+    packages=find_packages(),
+    include_package_data=True
 )
