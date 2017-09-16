@@ -5,47 +5,39 @@ Purpose:    Implements a utility for administering the JSON Patch standard (IETF
             defined at https://tools.ietf.org/html/rfc6902
 """
 
-#########################
-#
-# String Constants
-#
-#########################
-__ADD = "add"
-__REPLACE = "replace"
-__REMOVE = "remove"
-__COPY = "copy"
-__MOVE = "move"
-__TEST = "test"
-
 
 #########################
 #
-# Interface
+# Convenience Functions
 #
 #########################
 def apply_patch(patch, obj):
     pass
 
 
+#########################
+#
+# Classes
+#
+#########################
 class JsonPatch(object):
 
     def __init__(self, patches):
         self.patches = patches
 
-    def __apply_test(self, patch):
+        #########################
+        #
+        # Interface
+        #
+        #########################
+
+        #########################
+        #
+        # Helper Functions
+        #
+        #########################
 
 
-#########################
-#
-# Helper Functions
-#
-#########################
-
-#########################
-#
-# Helper Functions
-#
-#########################
 class JsonPatchException(Exception):
     """
     Class for exceptions raised within the json_patch module.
